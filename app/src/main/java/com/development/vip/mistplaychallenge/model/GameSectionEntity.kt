@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class GameListEntity(
+data class GameSectionEntity(
     @SerializedName("list_title")
     val title: String,
     @SerializedName("games")

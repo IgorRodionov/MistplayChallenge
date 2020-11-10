@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="game_item_height">200dp</dimen>
+    <dimen name="game_item_width">180dp</dimen>
+
+    <dimen name="margin">16dp</dimen>
+</resources>

@@ -1,7 +1,7 @@
 package com.development.vip.mistplaychallenge.repository
 
-import com.development.vip.mistplaychallenge.model.GameListEntity
+import com.development.vip.mistplaychallenge.model.GameSectionEntity
 
 interface GameRepository {
-    suspend fun fetchGameList(): List<GameListEntity>
+    suspend fun fetchGameList(): List<GameSectionEntity>
 }

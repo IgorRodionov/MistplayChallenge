@@ -7,9 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.development.vip.mistplaychallenge.R
+import com.development.vip.mistplaychallenge.model.GameSectionEntity
 import com.development.vip.mistplaychallenge.repository.GameRepositoryImpl
+import com.development.vip.mistplaychallenge.view.adapters.GameSectionAdapter
 import com.development.vip.mistplaychallenge.viewmodel.GameListViewModel
 import com.development.vip.mistplaychallenge.viewmodel.GameViewModelFactory
+import kotlinx.android.synthetic.main.fragment_game_list.*
 
 class GameListFragment : Fragment() {
 
@@ -27,8 +30,13 @@ class GameListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.gameListData.observe(viewLifecycleOwner) {
-            val t = it
+            setupGameListView(it)
         }
+    }
+
+    private fun setupGameListView(sectionList: List<GameSectionEntity>) = with(gameListView) {
+        adapter = GameSectionAdapter(sectionList)
+        hasFixedSize()
     }
 
     private fun readAssets(): String =
