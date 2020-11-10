@@ -18,8 +18,7 @@
             android:id="@+id/gameCoverView"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/image_height"
-            android:importantForAccessibility="no"
-            android:transitionName="@string/gameCover" />
+            android:importantForAccessibility="no" />
     </com.google.android.material.card.MaterialCardView>
 
     <TextView

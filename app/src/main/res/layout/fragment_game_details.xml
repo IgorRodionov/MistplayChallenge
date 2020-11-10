@@ -18,7 +18,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin"
         android:importantForAccessibility="no"
-        android:transitionName="@string/gameFullCover"
         app:layout_constraintTop_toBottomOf="@+id/titleView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

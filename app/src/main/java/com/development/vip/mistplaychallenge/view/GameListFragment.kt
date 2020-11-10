@@ -8,7 +8,6 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.FragmentNavigatorExtras
 import com.development.vip.mistplaychallenge.R
 import com.development.vip.mistplaychallenge.model.GameSectionEntity
 import com.development.vip.mistplaychallenge.repository.GameRepositoryImpl
@@ -16,7 +15,6 @@ import com.development.vip.mistplaychallenge.view.adapters.GameSectionAdapter
 import com.development.vip.mistplaychallenge.viewmodel.GameListViewModel
 import com.development.vip.mistplaychallenge.viewmodel.GameViewModelFactory
 import kotlinx.android.synthetic.main.fragment_game_list.*
-import kotlinx.android.synthetic.main.game_item.view.*
 
 class GameListFragment : Fragment() {
 
@@ -45,9 +43,7 @@ class GameListFragment : Fragment() {
     private fun setupGameListView(sectionList: List<GameSectionEntity>) = with(gameListView) {
         adapter = GameSectionAdapter(sectionList) {
             findNavController().navigate(R.id.gameDetailsDest,
-                bundleOf(GameDetailsFragment.GAME_EXTRA to it),
-                null,
-                FragmentNavigatorExtras(gameCoverView to getString(R.string.gameFullCover)))
+                bundleOf(GameDetailsFragment.GAME_EXTRA to it))
         }
         hasFixedSize()
     }
