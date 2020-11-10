@@ -9,7 +9,9 @@
         android:id="@+id/sectionTitleView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_large"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Game section title" />
@@ -18,8 +20,6 @@
         android:id="@+id/gameRowView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin"
-        android:scrollbars="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/sectionTitleView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

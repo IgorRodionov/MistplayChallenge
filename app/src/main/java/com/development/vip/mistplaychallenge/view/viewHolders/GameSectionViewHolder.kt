@@ -1,6 +1,7 @@
 package com.development.vip.mistplaychallenge.view.viewHolders
 
 import android.view.View
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.development.vip.mistplaychallenge.model.GameEntity
 import com.development.vip.mistplaychallenge.model.GameSectionEntity
@@ -17,6 +18,7 @@ class GameSectionViewHolder(override val containerView: View) : RecyclerView.Vie
 
     private fun setupRowView(gameList: List<GameEntity>) = with(containerView.gameRowView) {
         adapter = GameRowAdapter(gameList)
+        layoutManager = LinearLayoutManager(containerView.context, LinearLayoutManager.HORIZONTAL, false)
         hasFixedSize()
     }
 }

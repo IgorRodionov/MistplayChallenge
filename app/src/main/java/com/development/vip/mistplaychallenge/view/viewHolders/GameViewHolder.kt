@@ -11,6 +11,6 @@ class GameViewHolder(override val containerView: View): RecyclerView.ViewHolder(
 
     fun bind(entity: GameEntity) {
         containerView.titleView.text = entity.title
-        Glide.with(containerView.context).load(entity.image).into(containerView.gameCoverView)
+        Glide.with(containerView).load(entity.image).into(containerView.gameCoverView)
     }
 }
