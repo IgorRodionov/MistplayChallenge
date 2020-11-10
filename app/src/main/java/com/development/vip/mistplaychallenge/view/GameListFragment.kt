@@ -26,11 +26,7 @@ class GameListFragment : Fragment() {
         GameViewModelFactory(GameRepositoryImpl(readAssets()))
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View =
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
         inflater.inflate(R.layout.fragment_game_list, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -42,8 +38,7 @@ class GameListFragment : Fragment() {
 
     private fun setupGameListView(sectionList: List<GameSectionEntity>) = with(gameListView) {
         adapter = GameSectionAdapter(sectionList) {
-            findNavController().navigate(R.id.gameDetailsDest,
-                bundleOf(GameDetailsFragment.GAME_EXTRA to it))
+            findNavController().navigate(R.id.gameDetailsDest, bundleOf(GameDetailsFragment.GAME_EXTRA to it))
         }
         hasFixedSize()
     }
