@@ -9,7 +9,8 @@ import com.development.vip.mistplaychallenge.view.adapters.GameRowAdapter
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.game_section_item.view.*
 
-class GameSectionViewHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView), LayoutContainer {
+class GameSectionViewHolder(override val containerView: View,
+                            private val listener: (GameEntity) -> Unit) : RecyclerView.ViewHolder(containerView), LayoutContainer {
 
     fun bind(entity: GameSectionEntity) {
         containerView.sectionTitleView.text = entity.title
@@ -17,7 +18,7 @@ class GameSectionViewHolder(override val containerView: View) : RecyclerView.Vie
     }
 
     private fun setupRowView(gameList: List<GameEntity>) = with(containerView.gameRowView) {
-        adapter = GameRowAdapter(gameList)
+        adapter = GameRowAdapter(gameList, listener)
         layoutManager = LinearLayoutManager(containerView.context, LinearLayoutManager.HORIZONTAL, false)
         hasFixedSize()
     }

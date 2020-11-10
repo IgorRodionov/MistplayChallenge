@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MistplayChallenge</string>
+    <string name="gameCover">GameCover</string>
+    <string name="gameFullCover">GameFullCover</string>
 </resources>

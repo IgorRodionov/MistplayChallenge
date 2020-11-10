@@ -9,6 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_small"
+        app:cardElevation="@dimen/margin_small"
         app:layout_constraintBottom_toTopOf="@+id/titleView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -17,7 +18,8 @@
             android:id="@+id/gameCoverView"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/image_height"
-            android:importantForAccessibility="no" />
+            android:importantForAccessibility="no"
+            android:transitionName="@string/gameCover" />
     </com.google.android.material.card.MaterialCardView>
 
     <TextView

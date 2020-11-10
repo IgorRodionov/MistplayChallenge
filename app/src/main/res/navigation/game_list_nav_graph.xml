@@ -8,4 +8,8 @@
         android:id="@+id/gameListDest"
         android:name="com.development.vip.mistplaychallenge.view.GameListFragment" />
 
+    <fragment
+        android:id="@+id/gameDetailsDest"
+        android:name="com.development.vip.mistplaychallenge.view.GameDetailsFragment" />
+
 </navigation>
